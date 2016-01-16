@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" type="text/css" href="cube.css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans"
+              rel="stylesheet"
+              type="text/css">
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    </head>
+    <body>
+        <div class="flexWrapper">
+            <div class="experiment">
+                <div id="cube">
+                    <div class="face one">
+                        One face
+                    </div>
+                    <div class="face two">
+                        Up, down, left, right
+                    </div>
+                    <div class="face three">
+                        Lorem ipsum.
+                    </div>
+                    <div class="face four">
+                        New forms of navigation are fun.
+                    </div>
+                    <div class="face five">
+                        Rotating 3D cube
+                    </div>
+                    <div class="face six">
+                        More content
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                Lorem <span class="highlight">ipsum dolor</span> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+        </div>
+        <script>
+            var experimentEl = $('.experiment');
+            var cubeEl = $('#cube');
+            var yAngle = 0;
+            experimentEl.click(function(e) {
+                yAngle = (yAngle + 90) % 360;
+                console.log('angle is ', yAngle);
+                cubeEl.css({ webkitTransform: "rotateY("+yAngle+"deg)" });
+            });
+        </script>
+    </body>
+</html>
