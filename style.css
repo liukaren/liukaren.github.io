@@ -1,34 +1,84 @@
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: .9rem;
-    line-height: 1.5rem;
     background-color: #505d7c;
-    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.5rem;
+    margin: 1rem;
+}
+
+a {
+    color: #ff9999;
+    font-weight: bolder;
+    text-decoration: none;
+
+    -webkit-transition: color .7s;
+    transition: color .7s;
+}
+
+a:hover {
+    color: white;
 }
 
 .flexWrapper {
     display: flex;
+    flex-wrap: wrap-reverse;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 .main {
-    background: rgba(80, 93, 124, 0.7);
     color: #e0e3eb;
+    text-shadow: 1px 1px black;
     width: 20rem;
-}
-
-.experiment {
-    cursor: pointer;
-    flex: 0 0 20rem;
-    margin-right: 2rem;
-
-    -webkit-perspective: 800px;
-    -webkit-perspective-origin: 50% 200px;
 }
 
 .highlight {
     color: #b3b3cc;
     font-weight: bolder;
+}
+
+#img-wheel,
+#img-wheel-buffer {
+    background-image: url('images/aerial.jpg');
+    background-size: cover;
+    border-radius: 5px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#img-wheel {
+    z-index: 1; // always shows on top of img-wheel-buffer
+}
+
+#img-wheel-buffer {
+    background-image: url('images/karencat.png');
+}
+
+.img-wheel-container {
+    flex: 0 0 300px;
+    width: 300px;
+    height: 300px;
+
+    cursor: pointer;
+    position: relative;
+    margin: 1rem;
+}
+
+.link-icons a {
+    margin-right: 5px;
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid #ff9999;
+    border-radius: 5px;
+
+    -webkit-transition: border .7s, color .7s;
+    transition: border .7s, color .7s;
+}
+
+.link-icons a:hover {
+    border: 1px solid white;
 }
