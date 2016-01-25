@@ -8,7 +8,7 @@ var outAnimation = 'zoomOut';
 $(function() {
     var wheelEl = $('#img-wheel');
     var wheelBufferEl = $('#img-wheel-buffer');
-    wheelEl.click(function() {
+    var showNextImage = function() {
         if (animating) {
             return false;
         }
@@ -26,5 +26,7 @@ $(function() {
             wheelBufferEl.toggleClass('animated ' + inAnimation);
             animating = false;
         });
-    });
+    }
+    setInterval(showNextImage, 4000); // auto-cycle through images
+    wheelEl.click(showNextImage); // allow faster cycling on click
 });
