@@ -1,0 +1,31 @@
+.nav-link {
+    display: block;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    text-transform: lowercase;
+    margin: 2rem;
+    padding: 1rem 0;
+
+    position: relative; /* for positioning ::before content */
+}
+
+.nav-link::before {
+    content: "";
+    background-color: #96C0CE;
+
+    position: absolute;
+    transition: width 0.5s, left 0.5s;
+    left: 50%;
+    width: 0;
+    height: 2px;
+}
+
+.nav-link::before {
+    bottom: 0;
+}
+
+.nav-link:hover::before {
+    width: 100%;
+    left: 0;
+}

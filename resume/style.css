@@ -1,0 +1,35 @@
+body {
+    margin: 1rem;
+}
+
+h1 {
+    margin: 3rem 0;
+}
+
+a {
+    color: #96C0CE;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+a:hover {
+    color: #74828F;
+    text-decoration: none;
+}
+
+.work-logo {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 0.5rem;
+}
+
+.work-title {
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+}
+
+.profile-img {
+    max-width: 20rem;
+}

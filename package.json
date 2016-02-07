@@ -1,0 +1,35 @@
+{
+  "name": "karen-website",
+  "version": "1.0.0",
+  "description": "\"Hey! It's a website!\"",
+  "main": "resume/index.js",
+  "scripts": {
+    "build": "browserify -t [ babelify --presets [ es2015 react ] ] resume/main.js -o resume/index.js",
+    "watch": "watchify -t [ babelify --presets [ es2015 react ] ] resume/main.js -o resume/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karenliu1/karenliu1.github.io.git"
+  },
+  "author": "karenliu1",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karenliu1/karenliu1.github.io/issues"
+  },
+  "homepage": "https://github.com/karenliu1/karenliu1.github.io",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babelify": "^7.2.0",
+    "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.3",
+    "history": "^1.17.0",
+    "react": "^0.14.7",
+    "react-addons-css-transition-group": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "react-router": "^1.0.3"
+  }
+}

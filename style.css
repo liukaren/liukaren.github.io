@@ -7,7 +7,7 @@ body {
 }
 
 a {
-    color: #ff9999;
+    color: #b3b3e6;
     font-weight: bolder;
     text-decoration: none;
 
@@ -30,11 +30,6 @@ a:hover {
     color: #e0e3eb;
     text-shadow: 1px 1px black;
     width: 20rem;
-}
-
-.highlight {
-    color: #b3b3cc;
-    font-weight: bolder;
 }
 
 #img-wheel,
