@@ -1,5 +1,5 @@
 body {
-    background-color: #505d7c;
+    background-color: #2A2829;
     font-family: 'Open Sans', sans-serif;
     font-size: 0.9rem;
     line-height: 1.5rem;
@@ -7,7 +7,7 @@ body {
 }
 
 a {
-    color: #b3b3e6;
+    color: #668284;
     font-weight: bolder;
     text-decoration: none;
 
@@ -16,7 +16,7 @@ a {
 }
 
 a:hover {
-    color: white;
+    color: #FF9900;
 }
 
 .flexWrapper {
@@ -27,8 +27,7 @@ a:hover {
 }
 
 .main {
-    color: #e0e3eb;
-    text-shadow: 1px 1px black;
+    color: #AAB3AB;
     width: 20rem;
 }
 
@@ -67,7 +66,7 @@ a:hover {
     margin-right: 5px;
     display: inline-block;
     padding: 5px;
-    border: 1px solid #ff9999;
+    border: 1px solid #668284;
     border-radius: 5px;
 
     -webkit-transition: border .7s, color .7s;
@@ -75,5 +74,5 @@ a:hover {
 }
 
 .link-icons a:hover {
-    border: 1px solid white;
+    border: 1px solid #FF9900;
 }
