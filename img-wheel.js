@@ -5,7 +5,15 @@ var animating = false;
 var inAnimation = 'zoomIn';
 var outAnimation = 'zoomOut';
 
-$(function() {
+var preloadImages = function() {
+    for (var i = 0; i < bgs.length; i++) {
+        $("<img />").attr('src', 'images/' + bgs[i]);
+    }
+}
+
+preloadImages();
+
+$(window).on('load', function() {
     var wheelEl = $('#img-wheel');
     var wheelBufferEl = $('#img-wheel-buffer');
     var showNextImage = function() {
