@@ -2,69 +2,66 @@
         "http://www.w3.org/TR/html4/loose.dtd">
 <html>
     <head>
-        <title>O_o Hello</title>
+        <title>Hello!</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="stylesheet" type="text/css"
+              href="https://fonts.googleapis.com/css?family=Nunito">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans"
-              rel="stylesheet"
-              type="text/css">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css"
-              rel="stylesheet"
-              type="text/css">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
-              rel="stylesheet"
-              type="text/css">
+        <link rel="stylesheet" type="text/css" href="flipper.css">
+        <link rel="stylesheet" type="text/css"
+              href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
         <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-        <script src="img-wheel.js" type="text/javascript"></script>
         <script src="ga-tracking.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(function() {
+                var card = $('.flipper');
+
+                // one-time intro slide animation
+                var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+                var animationClasses = 'animated rollIn';
+                card.addClass(animationClasses).one(animationEnd, function() {
+                    card.removeClass(animationClasses);
+                });
+
+                card.click(function() {
+                    card.toggleClass('is-active');
+                });
+            });
+        </script>
     </head>
+
     <body>
-        <div class="flexWrapper">
-            <div class="img-wheel-container animated fadeIn">
-                <div id="img-wheel"></div>
+        <div class="aligner">
+            <div class="flip-container">
+                <div class="flipper animated rollIn">
+                    <div class="business-card front">
+                        <div class="business-card--text">
+                            <div class="business-card--name">Karen Liu</div>
+                            <div class="business-card--title">Professional Snack Eater</div>
+                        </div>
+                    </div>
+                    <div class="business-card back">
+                        <p>
+                            Hi! I'm a software engineer who writes code for websites like
+                            <a href="https://www.patreon.com/" target="_blank">Patreon</a>,
+                            Google and Square &mdash;
+                            check out my <a href="resume/index.html">resume here</a>.
+                        </p>
 
-                <!-- Contains the next image, for animating -->
-                <div id="img-wheel-buffer"></div>
-            </div>
-            <div class="main animated fadeIn">
-                <p>
-                    Hello! I'm <span class="highlight">Karen</span>. I make a living
-                    writing <i class="fa fa-code"></i> for websites like
-                    <a href="https://www.patreon.com/" target="_blank">Patreon</a>
-                    (previously, <span class="highlight">Google</span> and
-                    <span class="highlight">Square</span>) &mdash; check out my <a href="resume/index.html">resume here</a>.
-                </p>
-
-                <p>
-                    More about me:
-                    I love to
-                    <a href="http://player.vimeo.com/video/119806256" target="_blank">climb curtains</a> and
-                    <a href="https://www.youtube.com/watch?v=RotOcNAmT5U" target="_blank">fling fireballs</a>.
-                    I'm an aspiring minimalist and my goal is to make my room look like no one lives there.
-                    <img src="ghost.png" alt="ghost" width="20">
-                </p>
-
-                <p>
-                    Thanks for stopping by!
-                </p>
-
-                <p class="link-icons">
-                    <a href="https://github.com/karenliu1"
-                       target="_blank">
-                        <i class="fa fa-github fa-2x"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/karen-liu-80b68249"
-                       target="_blank">
-                        <i class="fa fa-linkedin fa-2x"></i>
-                    </a>
-                    <a href="https://soundcloud.com/kliu/"
-                       target="_blank">
-                        <i class="fa fa-soundcloud fa-2x"></i>
-                    </a>
-                </p>
+                        <p>
+                            More about me:
+                            I love to
+                            <a href="http://player.vimeo.com/video/119806256" target="_blank">climb curtains</a> and
+                            <a href="https://www.youtube.com/watch?v=RotOcNAmT5U" target="_blank">fling fireballs</a>.
+                            I'm an aspiring minimalist; my goal is to make my room look like no one lives there.
+                            <img src="images/ghost.png" alt="ghost" width="20" style="vertical-align: middle;">
+                            Thanks for stopping by!
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </body>

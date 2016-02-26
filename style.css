@@ -1,78 +1,97 @@
+/* color scheme from http://design-seeds.com/home/entry/cut-flora2 */
+
 body {
-    background-color: #2A2829;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 0.9rem;
-    line-height: 1.5rem;
-    margin: 1rem;
+    background: #ede6e6;
+    color: white;
+    font-family: 'Nunito', serif;
+    margin: 0;
 }
 
 a {
-    color: #668284;
-    font-weight: bolder;
+    color: #d9bfca;
     text-decoration: none;
-
-    -webkit-transition: color .7s;
-    transition: color .7s;
 }
 
 a:hover {
-    color: #FF9900;
+    color: #9e8190;
 }
 
-.flexWrapper {
+.aligner {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap-reverse;
-    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100vh;
 }
 
-.main {
-    color: #AAB3AB;
-    width: 20rem;
+.flip-container {
+    -webkit-transform: rotateZ(5deg);
+    transform: rotateZ(5deg);
 }
 
-#img-wheel,
-#img-wheel-buffer {
-    background-image: url('images/aerial.jpg');
-    background-size: cover;
-    border-radius: 5px;
+.business-card {
+    background: #474147;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+    cursor: pointer;
+    overflow: hidden; /* for rounding corner of background pattern */
+    padding: 1rem;
+    position: relative;
+    -webkit-transition: top 1s, left 1s;
+    transition: top 1s, left 1s;
+}
+
+.business-card:hover::before {
+    opacity: 1;
+}
+
+/* background pattern */
+.business-card.front::before {
+    content: "";
 
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
     bottom: 0;
+    right: 0;
+    width: 6rem; /* 2rem (padding) + 4rem (half profile img width) */
+
+    background: url('images/dark_embroidery.png'); /* from subtlepatterns.com */
 }
 
-#img-wheel {
-    z-index: 1; // always shows on top of img-wheel-buffer
+/* circular profile photo */
+.business-card.front::after {
+    content: "";
+
+    border-radius: 50%;
+    border: 0.25rem solid white;
+
+    width: 8rem;
+    height: 8rem;
+
+    background: url('images/aerial.jpg');
+    background-size: cover;
+
+    z-index: 2;
+
+    position: absolute;
+    top: 50%;
+    margin-top: -4rem;
+    right: 2rem;
 }
 
-#img-wheel-buffer {
-    background-image: url('images/karencat.png');
+.business-card--text {
+    position: absolute;
+    bottom: 1rem;
 }
 
-.img-wheel-container {
-    flex: 0 0 300px;
-    width: 300px;
-    height: 300px;
-
-    cursor: pointer;
-    position: relative;
-    margin: 1rem;
-}
-
-.link-icons a {
-    margin-right: 5px;
-    display: inline-block;
-    padding: 5px;
-    border: 1px solid #668284;
-    border-radius: 5px;
-
-    -webkit-transition: border .7s, color .7s;
-    transition: border .7s, color .7s;
-}
-
-.link-icons a:hover {
-    border: 1px solid #FF9900;
+.business-card--name {
+    font-size: 1.5rem;
 }
