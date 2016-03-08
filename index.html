@@ -19,15 +19,24 @@
             $(function() {
                 var card = $('.flipper');
 
-                // one-time intro slide animation
+                // One-time intro slide animation
                 var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
                 var animationClasses = 'animated rollIn';
                 card.addClass(animationClasses).one(animationEnd, function() {
                     card.removeClass(animationClasses);
                 });
 
+                // On the first click, just enable is-active
+                card.one('click', function(e) {
+                    card.addClass('is-active');
+                    e.stopImmediatePropagation();
+                });
+
+                // On subsequent clicks, toggle both is-active and is-inactive
+                // (is-inactive never gets enabled until 2 clicks in)
                 card.click(function() {
                     card.toggleClass('is-active');
+                    card.toggleClass('is-inactive')
                 });
             });
         </script>
