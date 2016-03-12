@@ -38,6 +38,10 @@
                     card.toggleClass('is-active');
                     card.toggleClass('is-inactive')
                 });
+
+                $('a').click(function(e) {
+                    e.stopPropagation(); // Don't flip the card on link click
+                });
             });
         </script>
     </head>
