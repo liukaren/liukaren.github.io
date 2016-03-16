@@ -33,3 +33,12 @@ a:hover {
 .profile-img {
     max-width: 20rem;
 }
+
+.project-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
