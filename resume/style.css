@@ -6,7 +6,7 @@ h1 {
     margin: 3rem 0;
 }
 
-a {
+a, a:visited {
     color: #96C0CE;
     text-decoration: none;
     transition: color 0.5s;
