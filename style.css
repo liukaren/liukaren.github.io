@@ -95,3 +95,7 @@ a:hover {
 .business-card--name {
     font-size: 1.5rem;
 }
+
+.business-card--subtitle {
+    font-size: 0.8rem;
+}
