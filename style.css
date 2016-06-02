@@ -96,6 +96,11 @@ a:hover {
     font-size: 1.5rem;
 }
 
-.business-card--subtitle {
+.business-card--subtitle-link {
     font-size: 0.8rem;
+    color: #d9bfca;
+}
+
+.business-card--subtitle-link:hover {
+    color: #9e8190;
 }
