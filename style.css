@@ -104,3 +104,22 @@ a:hover {
 .business-card--subtitle-link:hover {
     color: #9e8190;
 }
+
+/* From animated.css
+ * https://github.com/daneden/animate.css/blob/master/source/specials/rollIn.css
+ */
+@keyframes rollIn {
+    from {
+        opacity: 0;
+        transform: translate3d(-25rem, 0, 0) rotate3d(0, 0, 1, -120deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.rollIn {
+    animation: rollIn 1.2s;
+}
