@@ -26,6 +26,10 @@ a:hover {
     align-items: center;
 }
 
+.work-section {
+    margin: 3rem 0;
+}
+
 .work-logo {
     display: inline-block;
     width: 3rem;
@@ -62,11 +66,16 @@ a:hover {
 }
 
 @media print {
-    .navigation {
+    /* Hide elements */
+    .navigation,
+    .intro img,
+    a[href^="screenshot_"]:after, /* links to screenshots */
+    .work-logo {
         display: none;
     }
 
-    .intro img {
-        display: none;
-    }
+    /* Decrease element margins */
+    .work-section { margin: 0; }
+    h1 { margin: 0 0 0.5cm 0; }
+    @page { margin: 0.5cm; }
 }
