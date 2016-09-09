@@ -21,6 +21,11 @@ a:hover {
     text-align: center;
 }
 
+.intro {
+    display: flex;
+    align-items: center;
+}
+
 .work-logo {
     display: inline-block;
     width: 3rem;
@@ -41,7 +46,10 @@ a:hover {
 }
 
 .profile-img {
-    max-width: 20rem;
+    width: 10rem;
+    height: 10rem;
+    margin-right: 1rem;
+    float: left;
 }
 
 .project-image {
@@ -51,4 +59,14 @@ a:hover {
     height: 20rem;
     margin-bottom: 1rem;
     width: 100%;
+}
+
+@media print {
+    .navigation {
+        display: none;
+    }
+
+    .intro img {
+        display: none;
+    }
 }
