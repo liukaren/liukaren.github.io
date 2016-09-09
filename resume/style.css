@@ -17,6 +17,10 @@ a:hover {
     text-decoration: none;
 }
 
+.contact {
+    text-align: center;
+}
+
 .work-logo {
     display: inline-block;
     width: 3rem;
