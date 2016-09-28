@@ -17,8 +17,13 @@
             $(function() {
                 var card = $('.flipper');
 
+                // Prepare sound file
+                var CARD_SOUND_DELAY_MS = 250; // Wait for scaling, play sound on flipping
+                var cardSound = new Audio('cardflip.mp3');
+
                 // On the first click, just enable is-active
                 card.one('click', function(e) {
+                    setTimeout(cardSound.play.bind(cardSound), CARD_SOUND_DELAY_MS);
                     card.addClass('is-active');
                     e.stopImmediatePropagation();
                 });
@@ -26,6 +31,7 @@
                 // On subsequent clicks, toggle both is-active and is-inactive
                 // (is-inactive never gets enabled until 2 clicks in)
                 card.click(function() {
+                    setTimeout(cardSound.play.bind(cardSound), CARD_SOUND_DELAY_MS);
                     card.toggleClass('is-active');
                     card.toggleClass('is-inactive')
                 });
