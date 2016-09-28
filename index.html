@@ -14,6 +14,11 @@
         <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
         <script src="ga-tracking.js" type="text/javascript"></script>
         <script type="text/javascript">
+            function trackCardFlip(card) {
+                var eventAction = card.hasClass('is-active') ? 'flipToBack' : 'flipToFront';
+                ga('send', 'event', 'Business Card', eventAction);
+            }
+
             $(function() {
                 var card = $('.flipper');
 
@@ -26,6 +31,7 @@
                     setTimeout(cardSound.play.bind(cardSound), CARD_SOUND_DELAY_MS);
                     card.addClass('is-active');
                     e.stopImmediatePropagation();
+                    trackCardFlip(card);
                 });
 
                 // On subsequent clicks, toggle both is-active and is-inactive
@@ -33,7 +39,8 @@
                 card.click(function() {
                     setTimeout(cardSound.play.bind(cardSound), CARD_SOUND_DELAY_MS);
                     card.toggleClass('is-active');
-                    card.toggleClass('is-inactive')
+                    card.toggleClass('is-inactive');
+                    trackCardFlip(card);
                 });
 
                 $('a').click(function(e) {
