@@ -3,7 +3,8 @@
 body {
     background: #ede6e6;
     color: white;
-    font-family: 'Nunito', serif;
+    font-family: 'Trebuchet MS';
+    line-height: 1.5;
     margin: 0;
 }
 
@@ -97,7 +98,6 @@ a:hover {
 }
 
 .business-card--subtitle-link {
-    font-size: 0.8rem;
     color: #d9bfca;
 }
 
