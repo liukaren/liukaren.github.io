@@ -7,14 +7,13 @@ h1 {
 }
 
 a, a:visited {
-    color: #96C0CE;
-    text-decoration: none;
-    transition: color 0.5s;
+    color: #E34A6F;
+    text-decoration: underline;
+    transition: color 250ms;
 }
 
 a:hover {
-    color: #74828F;
-    text-decoration: none;
+    color: #CEB1BE;
 }
 
 .contact {

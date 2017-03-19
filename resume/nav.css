@@ -1,10 +1,11 @@
 .nav-link {
     display: block;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: bold;
     letter-spacing: 0.2rem;
+    text-decoration: none !important;
     text-transform: lowercase;
-    margin: 2rem;
+    margin: 1rem;
     padding: 1rem 0;
 
     position: relative; /* for positioning ::before content */
@@ -12,7 +13,7 @@
 
 .nav-link::before {
     content: "";
-    background-color: #96C0CE;
+    background-color: #CEB1BE;
 
     position: absolute;
     transition: width 0.5s, left 0.5s;
