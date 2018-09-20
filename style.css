@@ -111,7 +111,7 @@ a:hover {
 @keyframes rollIn {
     from {
         opacity: 0;
-        transform: translate3d(-25rem, 0, 0) rotate3d(0, 0, 1, -120deg);
+        transform: translate3d(-25em, 0, 0) rotate3d(0, 0, 1, -120deg);
     }
 
     to {
