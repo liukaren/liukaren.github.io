@@ -55,15 +55,6 @@ a:hover {
     vertical-align: middle;
 }
 
-.project-image {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 20rem;
-    margin-bottom: 1rem;
-    width: 100%;
-}
-
 @media print {
     /* Hide elements */
     .navigation,
