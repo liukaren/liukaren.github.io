@@ -3,6 +3,11 @@ body {
 }
 
 h1 {
+    font-weight: 500;
+    text-align: center;
+}
+
+h1, h2 {
     margin: 3rem 0;
 }
 
@@ -16,16 +21,20 @@ a:hover {
     color: #CEB1BE;
 }
 
-.intro {
-    display: flex;
-    align-items: center;
+@keyframes bounce {
+    0% { transform: scaleX(1) scaleY(1.1); }
+    100% { transform: scaleX(1.1) scaleY(1); }
 }
 
 .profile-img {
+    transform-origin: bottom center;
+    animation: bounce 1s ease-in-out infinite alternate;
+
     width: 10rem;
     height: 10rem;
-    margin-right: 1rem;
-    flex: none;
+
+    display: block;
+    margin: 0 auto 1rem auto;
 }
 
 .work-section {
