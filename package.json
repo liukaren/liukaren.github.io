@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/karenliu1/karenliu1.github.io.git"
+    "url": "https://github.com/liukaren/liukaren.github.io.git"
   },
-  "author": "karenliu1",
+  "author": "liukaren",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/karenliu1/karenliu1.github.io/issues"
+    "url": "https://github.com/liukaren/liukaren.github.io/issues"
   },
-  "homepage": "https://github.com/karenliu1/karenliu1.github.io",
+  "homepage": "https://github.com/liukaren/liukaren.github.io",
   "devDependencies": {
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
