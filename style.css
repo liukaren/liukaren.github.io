@@ -1,20 +1,20 @@
-/* color scheme from http://design-seeds.com/home/entry/cut-flora2 */
-
 body {
-    background: #ede6e6;
+    background-color: #fcfcfc;
     color: white;
     font-family: 'Trebuchet MS';
     line-height: 1.5;
     margin: 0;
 }
 
-a {
-    color: #d9bfca;
+a,
+.business-card--subtitle-link {
+    color: #e85f5f;
     text-decoration: none;
 }
 
-a:hover {
-    color: #9e8190;
+a:hover,
+.business-card--subtitle-link:hover {
+    color: #BBBBBB;
 }
 
 .aligner {
@@ -39,7 +39,7 @@ a:hover {
 }
 
 .business-card {
-    background: #474147;
+    background-color: #333333;
     box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
     box-sizing: border-box;
     cursor: pointer;
@@ -95,14 +95,6 @@ a:hover {
 
 .business-card--name {
     font-size: 1.5rem;
-}
-
-.business-card--subtitle-link {
-    color: #d9bfca;
-}
-
-.business-card--subtitle-link:hover {
-    color: #9e8190;
 }
 
 /* From animated.css
