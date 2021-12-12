@@ -34,20 +34,17 @@ a:hover {
     font-weight: bold;
 }
 
-/* cat image in the middle of name */
-.first-name:after {
-    content: url(karencat.svg);
+.cat-container {
+    text-align: center;
+}
 
+.cat-image {
     transform-origin: bottom center;
     animation: bounce 1s ease-in-out infinite alternate;
 
-    display: inline-block;
     width: 10rem;
     height: 10rem;
-    margin: 0 1rem 0 1.5rem;
-
-    position: relative;
-    top: 2rem;
+    margin: 2rem auto 0;
 }
 
 .work-section {
