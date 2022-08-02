@@ -16,13 +16,13 @@ h4 {
 }
 
 a, a:visited {
-    color: #E34A6F;
+    color: #E65F5C;
     text-decoration: underline;
     transition: color 250ms;
 }
 
 a:hover {
-    color: #CEB1BE;
+    color: #644536;
 }
 
 @keyframes bounce {
