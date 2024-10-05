@@ -1,5 +1,14 @@
+body, h4 {
+    font-family: "Nunito";
+}
+
+h1, h2, h3, .nav-link {
+    font-family: "League Spartan";
+}
+
 body {
     margin: 2rem;
+    font-size: 16px;
 }
 
 h1 {
@@ -16,7 +25,7 @@ h4 {
 }
 
 a, a:visited {
-    color: #E65F5C;
+    color: #A0211C;
     text-decoration: underline;
     transition: color 250ms;
 }
