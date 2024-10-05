@@ -1,27 +1,60 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+}
+
 body, h4 {
     font-family: "Nunito";
+    line-height: 1.5;
+}
+
+main {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #e6e6e6;
 }
 
 h1, h2, h3, .nav-link {
     font-family: "League Spartan";
 }
 
-body {
-    margin: 2rem;
-    font-size: 16px;
+h2, h3, h4 {
+    font-weight: 300;
 }
 
 h1 {
-    font-weight: 500;
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
     text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
-h1, h2 {
-    margin: 3rem 0;
+h2 {
+    font-size: 2rem;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 
 h4 {
-    font-size: 1em;
+    font-size: 1rem;
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 
 a, a:visited {
@@ -39,8 +72,12 @@ a:hover {
     100% { transform: scaleX(1.1) scaleY(1); }
 }
 
-#about {
-    font-weight: bold;
+section {
+    margin-bottom: 32px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .cat-container {
@@ -51,20 +88,26 @@ a:hover {
     transform-origin: bottom center;
     animation: bounce 1s ease-in-out infinite alternate;
 
-    width: 10rem;
-    height: 10rem;
-    margin: 2rem auto 0;
+    width: 100px;
+    height: 100px;
+    margin-top: 24px;
 }
 
 .work-section {
-    margin: 3rem 0;
+    margin: 24px 0;
 }
 
-.work-logo {
-    display: inline-block;
-    width: 3rem;
-    height: 3rem;
-    margin-right: 0.5rem;
+.title-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.title-logo {
+    flex: none;
+    width: 30px;
+    height: 30px;
 }
 
 .empower-logo, .zenrez-logo {
@@ -73,13 +116,34 @@ a:hover {
 
 .zenrez-logo {
     background-color: #354b60;
-    padding: 0.5rem;
+    padding: 4px;
 }
 
-.work-title {
-    display: inline-block;
+.title-text {
+    flex: 1;
     margin: 0;
-    vertical-align: middle;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th {
+        text-align: left;
+    }
+
+    th, td {
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+
+    th {
+        border-bottom: 2px solid #e6e6e6;
+    }
+
+    td {
+        border-bottom: 1px solid #e6e6e6;
+    }
 }
 
 @media print {
@@ -88,7 +152,8 @@ a:hover {
     .first-name:after,
     .last-name:before,
     a[href^="screenshot_"]:after, /* links to screenshots */
-    .work-logo {
+    .title-logo,
+    .cat-container {
         display: none;
     }
 
