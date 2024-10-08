@@ -1,3 +1,16 @@
+:root {
+    --divider-color: #E6E6E6;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fadeIn {
+    animation: fadeIn 1s forwards;
+}
+
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -19,7 +32,7 @@ main {
 
 hr {
     border: 0;
-    border-top: 1px solid #e6e6e6;
+    border-top: 1px solid var(--divider-color);
 }
 
 h1, h2, h3, .nav-link {
@@ -136,11 +149,11 @@ section {
     }
 
     th {
-        border-bottom: 2px solid #e6e6e6;
+        border-bottom: 2px solid var(--divider-color);
     }
 
     td {
-        border-bottom: 1px solid #e6e6e6;
+        border-bottom: 1px solid var(--divider-color);
     }
 }
 
