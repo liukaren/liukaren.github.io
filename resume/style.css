@@ -108,14 +108,12 @@ section {
     flex: none;
     width: 30px;
     height: 30px;
-}
-
-.empower-logo, .zenrez-logo {
     border-radius: 3px;
 }
 
 .zenrez-logo {
     background-color: #354b60;
+    box-sizing: border-box;
     padding: 4px;
 }
 
