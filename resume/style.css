@@ -103,6 +103,10 @@ section {
     border: 3px solid var(--divider-color);
     width: 100px;
     height: 100px;
+
+    @media screen and (max-width: 600px) {
+        display: none;
+    }
 }
 
 .work-section {
