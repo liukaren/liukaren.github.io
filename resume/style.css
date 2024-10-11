@@ -2,6 +2,7 @@
     --divider-color: #E6E6E6;
     --accent-color: #881865;
     --nav-link-color: white;
+    --page-max-width: 700px;
 }
 
 @keyframes fadeIn {
@@ -26,7 +27,7 @@ body, h4 {
 }
 
 main {
-    max-width: 700px;
+    max-width: var(--page-max-width);
     margin-left: auto;
     margin-right: auto;
     padding-left: 16px;
