@@ -2,9 +2,9 @@
 
 /* customized card size */
 .flipper, .front, .back {
-    width: 25rem;
+    width: 400px;
     max-width: 100vw;
-    min-height: 14rem;
+    min-height: 225px;
 }
 
 /* entire container, keeps perspective */

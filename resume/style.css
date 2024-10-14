@@ -1,8 +1,10 @@
 :root {
     --divider-color: #E6E6E6;
-    --accent-color: #881865;
+    --accent-color: #9A244F;
     --nav-link-color: white;
     --page-max-width: 700px;
+    --title-font: 'League Spartan';
+    --body-font: 'Source Sans 3';
 }
 
 @keyframes fadeIn {
@@ -22,7 +24,7 @@ body {
 }
 
 body, h4 {
-    font-family: "Nunito";
+    font-family: var(--body-font);
     line-height: 1.5;
 }
 
@@ -40,11 +42,15 @@ hr {
 }
 
 h1, h2, h3, .nav-link {
-    font-family: "League Spartan";
+    font-family: var(--title-font);
 }
 
-h2, h3, h4 {
-    font-weight: 300;
+h2, h3 {
+    font-weight: 400;
+}
+
+h4 {
+    font-weight: 400;
 }
 
 h1 {
@@ -86,10 +92,6 @@ a:hover {
 
 section {
     margin-bottom: 32px;
-
-    &:last-child {
-        margin-bottom: 0;
-    }
 }
 
 .about-row {
