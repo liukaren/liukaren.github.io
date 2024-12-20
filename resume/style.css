@@ -125,15 +125,20 @@ section {
 
 .title-logo {
     flex: none;
-    width: 30px;
-    height: 30px;
+    max-width: 30px;
+    max-height: 30px;
     border-radius: 3px;
+
+    &.horizontal {
+        border-radius: 0;
+    }
 }
 
 .zenrez-logo {
     background-color: #354b60;
     box-sizing: border-box;
     padding: 4px;
+    width: 30px;
 }
 
 .title-text {
