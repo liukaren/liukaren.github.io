@@ -20,11 +20,11 @@
     <link rel="stylesheet" type="text/css" href="flipper.css" />
     <script src="ga-tracking.js" type="text/javascript"></script>
     <script type="text/javascript">
-      function trackCardFlip(card) {
-        var eventAction = hasClass(card, "is-active")
+      function trackCardFlip(card, eventType /* e.g. click or scroll */) {
+        var direction = hasClass(card, "is-active")
           ? "flipToBack"
           : "flipToFront";
-        ga("send", "event", "Business Card", eventAction);
+        ga("send", "event", "Business Card", { direction, eventType });
       }
 
       function hasClass(element, className) {
@@ -59,24 +59,35 @@
         var CARD_SOUND_DELAY_MS = 250; // Wait for scaling, play sound on flipping
         var cardSound = new Audio("cardflip.mp3");
 
-        var isFirstClick = true;
-
-        // On the first click, just enable is-active
-        card.addEventListener("click", function (e) {
+        var isFirstFlip = true;
+        function flip(e) {
           if (e.target.tagName === "A") {
             return; // Don't flip the card on link click
           }
 
           setTimeout(cardSound.play.bind(cardSound), CARD_SOUND_DELAY_MS);
 
-          if (isFirstClick) {
+          // On the first click, just enable is-active (for animation purposes)
+          if (isFirstFlip) {
             addClass(card, "is-active");
-            isFirstClick = false;
+            isFirstFlip = false;
           } else {
             toggleClass(card, "is-active");
             toggleClass(card, "is-inactive");
           }
-          trackCardFlip(card);
+          trackCardFlip(card, e.type);
+        }
+
+        card.addEventListener("click", flip);
+
+        // Also listen for scroll in case it's not clear you're meant to click
+        document.addEventListener("scroll", (e) => {
+          if (
+            !hasClass(card, "is-active") &&
+            (window.scrollY > 0 || window.scrollX > 0)
+          ) {
+            flip(e);
+          }
         });
       };
     </script>
