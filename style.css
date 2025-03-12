@@ -60,7 +60,9 @@ a:hover,
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+    overflow: hidden;
 }
 
 .flip-container {

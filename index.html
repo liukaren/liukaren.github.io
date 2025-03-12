@@ -60,7 +60,11 @@
         var cardSound = new Audio("cardflip.mp3");
 
         var isFirstFlip = true;
+        var isFlipping = false;
         function flip(e) {
+          if (isFlipping) return;
+          isFlipping = true;
+
           if (e.target.tagName === "A") {
             return; // Don't flip the card on link click
           }
@@ -76,6 +80,9 @@
             toggleClass(card, "is-inactive");
           }
           trackCardFlip(card, e.type);
+
+          // Wait for entire animation to finish before allowing flip again
+          setTimeout(() => isFlipping = false, 1000);
         }
 
         card.addEventListener("click", flip);
