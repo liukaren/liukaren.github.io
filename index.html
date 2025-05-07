@@ -63,11 +63,11 @@
         var isFlipping = false;
         function flip(e) {
           if (isFlipping) return;
-          isFlipping = true;
 
-          if (e.target.tagName === "A") {
-            return; // Don't flip the card on link click
-          }
+          // Don't flip the card on link click
+          if (e.target.tagName === "A") return;
+
+          isFlipping = true;
 
           setTimeout(cardSound.play.bind(cardSound), CARD_SOUND_DELAY_MS);
 
