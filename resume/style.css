@@ -5,6 +5,7 @@
     --page-max-width: 700px;
     --title-font: 'Lexend';
     --body-font: 'Source Sans 3';
+    --logo-size: 32px;
 }
 
 @keyframes fadeIn {
@@ -19,7 +20,6 @@
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-smoothing: antialiased;
     margin: 0;
 }
 
@@ -125,8 +125,8 @@ section {
 
 .title-logo {
     flex: none;
-    max-width: 30px;
-    max-height: 30px;
+    max-width: var(--logo-size);
+    max-height: var(--logo-size);
     border-radius: 3px;
 
     &.horizontal {
@@ -134,11 +134,15 @@ section {
     }
 }
 
+.figma-logo {
+    width: var(--logo-size);
+}
+
 .zenrez-logo {
     background-color: #354b60;
     box-sizing: border-box;
     padding: 4px;
-    width: 30px;
+    width: var(--logo-size);
 }
 
 .title-text {
